@@ -6,7 +6,7 @@ const {secret} = require('../../config/config');
 // import {Fecha_actual} from '../funciones_js/validaciones';
 
 export const getPrueba = async (req, res) => {
-    res.send('Hello World')
+    res.send('Hello Worldddddd')
 }
 
 export const register = async (req, res) => {
