@@ -1,4 +1,4 @@
-// const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const db = require('../../config/database');
 var bcrypt = require('bcrypt');
 const {secret} = require('../../config/config');
@@ -54,14 +54,17 @@ export const register = async (req, res) => {
 
 //funcion para login
 export const login = async (req, res) => {
+    console.log(req.body);
     const { Username, Password } = req.body;
     let query = "SELECT * FROM usuarios WHERE Username = ?";
     let result = await db.query(query, [Username]);
 
     //comprobar que los campos esten completos
     if(Username && Password){
+        console.log('entro');
         //validar que existe el usuario
         if(result.length > 0){
+            console.log('existe user');
             //validar que la contraseña sea correcta
             if(bcrypt.compareSync(Password, result[0].Password)){
                 //generar token
@@ -78,6 +81,7 @@ export const login = async (req, res) => {
         }
         else{
             //usuario no existe
+            console.log('NO existe user');
             res.status(400).json({code: 400, message: 'Usuario no existe'});
         }
     }else{

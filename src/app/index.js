@@ -14,9 +14,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
             <BrowserRouter>
             <Routes>
                     <Route exact path="/" element={<Inicio />}/>
-                    {/* <Route exact path="/Login">
-                        <Login />
-                    </Route> */}
+                    <Route exact path="/Login" element={<Login />}/>
                     {/* <Route exact path="/Sign_in">
                         <Sign_in />
                     </Route>
