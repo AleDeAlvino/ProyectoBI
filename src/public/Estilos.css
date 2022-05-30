@@ -285,3 +285,20 @@ margin-top:8%;
     border: none;
     margin-top: 16%;
 }
+/*-------------------FORMULARIO--------------------*/
+.in-container{
+    left:0;
+    width: 50%;
+    z-index:2;
+}
+.overlay-container-4{
+    position:absolute;
+    top:0;
+    right: 60%;
+    width: 50%;
+    height: 100%;
+    background:#11C3CB;
+}
+.mov-label{
+    margin-top: 10%;
+}

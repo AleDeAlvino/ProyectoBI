@@ -7,7 +7,7 @@ function Inicio () {
         <div className="container">
             <h4>Bienvenido al Proyecto BI</h4>
             <Link to="/Login"><input className="button-2" type="submit" value="Login"/></Link>
-            <input className="button-3" type="submit" value="Sign up"/>
+            <Link to="/Registro"><input className="button-3" type="submit" value="Sign up"/></Link>
             <div className="overlay-container-2"/>
             <div className="overlay-container-3">
                 <h3>Informacion del Equipo</h3>

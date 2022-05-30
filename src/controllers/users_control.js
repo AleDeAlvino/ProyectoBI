@@ -10,11 +10,13 @@ export const getPrueba = async (req, res) => {
 }
 
 export const register = async (req, res) => {
+    console.log(req.body);
     const {Username, Password, Password2} = req.body;
 
     //comprobar que los campos esten completos
     if(Username && Password && Password2){
         //comprobar que el usuario no exista
+        console.log('entro');
         let query = "SELECT * FROM usuarios WHERE Username = ?";
         const rows = await db.query(query, [Username]);
         if(rows.length > 0){
